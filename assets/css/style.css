@@ -1,0 +1,32 @@
+
+img {
+    width: 100%;
+}
+
+.height-custom {
+    height: 200px;
+}
+
+#game-message {
+    margin: 3%;
+}
+
+#fighter-card {
+    visibility: hidden;
+}
+
+#fight-button {
+    visibility: hidden;
+}
+
+#enemy-card {
+    visibility: hidden;
+}
+
+#defeated-foes-message {
+    visibility: hidden;
+} 
+
+#defeated-enemys {
+    visibility: hidden;
+}
