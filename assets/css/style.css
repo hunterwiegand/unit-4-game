@@ -11,22 +11,10 @@ img {
     margin: 3%;
 }
 
-#fighter-card {
+.hidden {
     visibility: hidden;
 }
 
-#fight-button {
-    visibility: hidden;
-}
-
-#enemy-card {
-    visibility: hidden;
-}
-
-#defeated-foes-message {
-    visibility: hidden;
-} 
-
-#defeated-enemys {
-    visibility: hidden;
+.visible {
+    visibility: visible;
 }
