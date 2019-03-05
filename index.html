@@ -35,7 +35,7 @@
             src="https://vignette.wikia.nocookie.net/lotr/images/d/de/248px-Aragorn2.jpg/revision/latest?cb=20070802171658"
             class="rounded float-left height-custom" alt="Image of Human">
           <div class="card-body">
-            <button type="button" class="btn btn-primary btn-sm">Select</button>
+            <button id="human-select" type="button" class="btn btn-primary btn-sm">Select</button>
           </div>
         </div>
       </div>
@@ -46,7 +46,7 @@
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6-QmgblrLgJRsccCHhzdTBnfWbHnRP6VahkYtDIgkzxOAHz2IQ"
             class="rounded float-left height-custom" alt="Image of Elf">
           <div class="card-body">
-            <button type="button" class="btn btn-primary btn-sm">Select</button>
+            <button id="elf-select" type="button" class="btn btn-primary btn-sm faction-btn">Select</button>
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@
           <img id="first-img" src="https://static.giantbomb.com/uploads/scale_small/0/299/200890-gimli.jpg"
             class="rounded float-left height-custom" alt="Image of Dwarf">
           <div class="card-body">
-            <button type="button" class="btn btn-primary btn-sm">Select</button>
+            <button id="dwarf-select" type="button" class="btn btn-primary btn-sm">Select</button>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
             src="https://vignette.wikia.nocookie.net/lotr/images/8/80/4_hobbits.jpg/revision/latest?cb=20110117213317"
             class="rounded float-left height-custom" alt="Image of Hobbits">
           <div class="card-body">
-            <button type="button" class="btn btn-primary btn-sm">Select</button>
+            <button id="hobbit-select" type="button" class="btn btn-primary btn-sm">Select</button>
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@
     <div class="row">
 
       <div class="col-md-4">
-        <div id="fighter-card" class="card text-center">
+        <div id="fighter-card" class="card text-center hidden">
           <img id="fighter-img" src="" class="rounded float-left height-custom" alt="Image of Choosed Fighter">
           <div class="card-body">
             <h5 class="card-title">Fighter</h5>
@@ -89,13 +89,13 @@
       </div>
 
       <div class="col-md-4">
-        <div id="fight-button" class="text-center">
+        <div id="fight-button" class="text-center hidden">
           <button type="button" class="btn btn-primary btn-sm">Attack!</button>
         </div>
       </div>
 
       <div class="col-md-4">
-        <div id="enemy-card" class="card text-center">
+        <div id="enemy-card" class="card text-center hidden">
           <img id="enemy-img" src="" class="rounded float-left height-custom" alt="Image of Choosed Fighter">
           <div class="card-body">
             <h5 class="card-title">Enemy</h5>
@@ -104,7 +104,7 @@
       </div>
     </div>
 
-    <div id="defeated-foes-message">
+    <div id="defeated-foes-message"  class="hidden">
       <h3>Defeated Foes</h3>
     </div>
 
@@ -122,6 +122,8 @@
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="assets/javascript/game.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
