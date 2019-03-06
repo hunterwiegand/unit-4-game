@@ -104,7 +104,7 @@ var game = {
 
         $("#human-select").on("click", function () {
             if (game.counter === 0) {
-                game.setPlayerStats("human", 200, 25, 10);
+                game.setPlayerStats("human", 311, 20, 5);
                 game.counter++;
                 game.displayPlayerStats();
             } else {
@@ -113,7 +113,7 @@ var game = {
 
         $("#elf-select").on("click", function () {
             if (game.counter === 0) {
-                game.setPlayerStats("elf", 125, 12, 15);
+                game.setPlayerStats("elf", 250, 30, 7);
                 game.counter++;
                 game.displayPlayerStats();
             } else {
@@ -122,7 +122,7 @@ var game = {
 
         $("#dwarf-select").on("click", function () {
             if (game.counter === 0) {
-                game.setPlayerStats("dwarf", 300, 20, 5);
+                game.setPlayerStats("dwarf", 400, 35, 5);
                 game.counter++;
                 game.displayPlayerStats();
             } else {
@@ -131,7 +131,7 @@ var game = {
 
         $("#hobbit-select").on("click", function () {
             if (game.counter === 0) {
-                game.setPlayerStats("hobbit", 75, 10, 30);
+                game.setPlayerStats("hobbit", 211, 10, 25);
                 game.counter++;
                 game.displayPlayerStats();
 
@@ -145,7 +145,7 @@ var game = {
 
         $("#human-select").on("click", function () {
             if (game.counter === 1 && game.playerFaction != "human") {
-                game.setEnemyStats("human", 200, 30, "https://vignette.wikia.nocookie.net/lotr/images/d/de/248px-Aragorn2.jpg/revision/latest?cb=20070802171658");
+                game.setEnemyStats("human", 311, 15, "https://vignette.wikia.nocookie.net/lotr/images/d/de/248px-Aragorn2.jpg/revision/latest?cb=20070802171658");
                 game.displayEnemyStats();
             } else {
             }
@@ -153,7 +153,7 @@ var game = {
 
         $("#elf-select").on("click", function () {
             if (game.counter === 1 && game.playerFaction != "elf") {
-                game.setEnemyStats("elf", 125, 15, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6-QmgblrLgJRsccCHhzdTBnfWbHnRP6VahkYtDIgkzxOAHz2IQ");
+                game.setEnemyStats("elf", 250, 25, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6-QmgblrLgJRsccCHhzdTBnfWbHnRP6VahkYtDIgkzxOAHz2IQ");
                 game.displayEnemyStats();
             } else {
             }
@@ -161,7 +161,7 @@ var game = {
 
         $("#dwarf-select").on("click", function () {
             if (game.counter === 1 && game.playerFaction != "dwarf") {
-                game.setEnemyStats("dwarf", 300, 25, "https://static.giantbomb.com/uploads/scale_small/0/299/200890-gimli.jpg");
+                game.setEnemyStats("dwarf", 400, 35, "https://static.giantbomb.com/uploads/scale_small/0/299/200890-gimli.jpg");
                 game.displayEnemyStats();
             } else {
             }
@@ -169,7 +169,7 @@ var game = {
 
         $("#hobbit-select").on("click", function () {
             if (game.counter === 1 && game.playerFaction != "hobbit") {
-                game.setEnemyStats("hobbit", 75, 12, "https://vignette.wikia.nocookie.net/lotr/images/8/80/4_hobbits.jpg/revision/latest?cb=20110117213317");
+                game.setEnemyStats("hobbit", 211, 5, "https://vignette.wikia.nocookie.net/lotr/images/8/80/4_hobbits.jpg/revision/latest?cb=20110117213317");
                 game.displayEnemyStats();
 
             } else {
