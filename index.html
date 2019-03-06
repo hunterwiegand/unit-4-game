@@ -30,56 +30,56 @@
 
     <div class="row">
       <div class="col-md-3">
-        <div class="card text-center">
-          <img id="first-img"
+        <div id="human-img" class="card text-center">
+          <img
             src="https://vignette.wikia.nocookie.net/lotr/images/d/de/248px-Aragorn2.jpg/revision/latest?cb=20070802171658"
             class="rounded float-left height-custom" alt="Image of Human">
           <div class="card-body">
-            <button id="human-select" type="button" class="btn btn-primary btn-sm">Select</button>
+            <button id="human-select" type="button" class="btn btn-sm">Select</button>
           </div>
         </div>
       </div>
 
       <div class="col-md-3">
-        <div class="card text-center">
-          <img id="first-img"
+        <div id="elf-img" class="card text-center">
+          <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6-QmgblrLgJRsccCHhzdTBnfWbHnRP6VahkYtDIgkzxOAHz2IQ"
             class="rounded float-left height-custom" alt="Image of Elf">
           <div class="card-body">
-            <button id="elf-select" type="button" class="btn btn-primary btn-sm faction-btn">Select</button>
+            <button id="elf-select" type="button" class="btn btn-sm faction-btn">Select</button>
           </div>
         </div>
       </div>
 
       <div class="col-md-3">
-        <div class="card text-center">
-          <img id="first-img" src="https://static.giantbomb.com/uploads/scale_small/0/299/200890-gimli.jpg"
+        <div id="dwarf-img" class="card text-center">
+          <img src="https://static.giantbomb.com/uploads/scale_small/0/299/200890-gimli.jpg"
             class="rounded float-left height-custom" alt="Image of Dwarf">
           <div class="card-body">
-            <button id="dwarf-select" type="button" class="btn btn-primary btn-sm">Select</button>
+            <button id="dwarf-select" type="button" class="btn btn-sm">Select</button>
           </div>
         </div>
       </div>
 
       <div class="col-md-3">
-        <div class="card text-center">
-          <img id="first-img"
+        <div id="hobbit-img" class="card text-center">
+          <img
             src="https://vignette.wikia.nocookie.net/lotr/images/8/80/4_hobbits.jpg/revision/latest?cb=20110117213317"
             class="rounded float-left height-custom" alt="Image of Hobbits">
           <div class="card-body">
-            <button id="hobbit-select" type="button" class="btn btn-primary btn-sm">Select</button>
+            <button id="hobbit-select" type="button" class="btn btn-sm">Select</button>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="game-message">
-      <h3 class="text-center">Choose your faction!</h3>
+    <div>
+      <h3 class="text-center" id="game-message">Choose your faction!</h3>
     </div>
 
     <div class="row">
 
-      <div class="col-md-4">
+      <div class="col-md-3">
         <div id="fighter-card" class="card text-center hidden">
           <img id="fighter-img" src="" class="rounded float-left height-custom" alt="Image of Choosed Fighter">
           <div class="card-body">
@@ -88,13 +88,13 @@
         </div>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div id="fight-button" class="text-center hidden">
-          <button type="button" class="btn btn-primary btn-sm">Attack!</button>
+          <button type="button" class="btn btn-sm">Attack!</button>
         </div>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-3">
         <div id="enemy-card" class="card text-center hidden">
           <img id="enemy-img" src="" class="rounded float-left height-custom" alt="Image of Choosed Fighter">
           <div class="card-body">
@@ -104,16 +104,29 @@
       </div>
     </div>
 
-    <div id="defeated-foes-message"  class="hidden">
+    <div id="defeated-foes-message" class="hidden">
       <h3>Defeated Foes</h3>
     </div>
 
     <div class="row">
-      <div class="col-md-4">
-        <div id="defeated-enemys">
+      <div class="col-md-3">
+        <div>
+          <img id="defeated-enemy1">
         </div>
       </div>
-    </div>>
+
+      <div class="col-md-3">
+        <div>
+          <img id="defeated-enemy2">
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div>
+          <img id="defeated-enemy3">
+        </div>
+      </div>
+    </div>
 
   </div>
   </div>
