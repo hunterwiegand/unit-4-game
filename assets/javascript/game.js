@@ -182,26 +182,21 @@ var game = {
         $("#fight-button").on("click", function () {
 
             if (game.playerCurrentHealth > 0 && game.enemyCurrentHealth > 0) {
-                game.calculateDamage();
                 game.evaluateDamage();
             }
 
         });
     },
 
-    //function to deal combat damage
-    calculateDamage: function () {
-        //Combat damage is dealt
+    evaluateDamage: function () {
+
         game.playerCurrentHealth -= game.enemyCounterAttack;
         game.enemyCurrentHealth -= game.playerCurrentAttack;
 
         console.log("player health: ", game.playerCurrentHealth);
         console.log("enemy health", game.enemyCurrentHealth);
 
-    },
-
-    evaluateDamage: function () {
-
+        //If damage was lethal
         if (game.playerCurrentHealth <= 0) {
             console.log("Get wrekt");
         } else if (game.enemyCurrentHealth <= 0) {
