@@ -13,30 +13,86 @@ var game = {
     enemyBaseHealth: "",
     enemyCurrentHealth: "",
     enemyCounterAttack: "",
+    enemyImgSrc: "",
 
+    //counter used to pick Player and Enemy faction
     counter: 0,
+    test: 0,
 
+    //set Values to global vars
     setPlayerStats: function (faction, health, attack, attackScale) {
         this.playerFaction = faction;
         this.playerBaseHealth = health;
+        this.playerCurrentHealth = health;
         this.playerBaseAttack = attack;
+        this.playerCurrentAttack = attack;
         this.playerAttackScale = attackScale;
     },
-
-    setEnemyStats: function (faction, health, counterAttack) {
+    setEnemyStats: function (faction, health, counterAttack, img) {
         this.enemyFaction = faction;
         this.enemyBaseHealth = health;
+        this.enemyCurrentHealth = health;
         this.enemyCounterAttack = counterAttack;
+        this.enemyImgSrc = img;
+
     },
 
-    
+    //Update display to show stats
     displayPlayerStats: function () {
+        $("#fighter-card").removeClass("hidden");
+        switch (game.playerFaction) {
+            case "human":
+                $("#fighter-img").attr("src", "https://vignette.wikia.nocookie.net/lotr/images/d/de/248px-Aragorn2.jpg/revision/latest?cb=20070802171658");
+                $("#human-img").remove();
+                break;
+
+            case "elf":
+                $("#fighter-img").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6-QmgblrLgJRsccCHhzdTBnfWbHnRP6VahkYtDIgkzxOAHz2IQ");
+                $("#elf-img").remove();
+                break;
+
+            case "dwarf":
+                $("#fighter-img").attr("src", "https://static.giantbomb.com/uploads/scale_small/0/299/200890-gimli.jpg");
+                $("#dwarf-img").remove();
+                break;
+
+            case "hobbit":
+                $("#fighter-img").attr("src", "https://vignette.wikia.nocookie.net/lotr/images/8/80/4_hobbits.jpg/revision/latest?cb=20110117213317");
+                $("#hobbit-img").remove();
+                break;
+        }
+        $("#game-message").html("<h3>Choose your Enemy!</h3>");
+        $("#game-message").addClass("text-center");
         console.log(game.playerFaction);
         console.log(game.playerBaseHealth);
         console.log(game.playerBaseAttack);
     },
-
     displayEnemyStats: function () {
+        $("#enemy-card").removeClass("hidden");
+        $("#fight-button").removeClass("hidden");
+        switch (game.enemyFaction) {
+            case "human":
+                $("#enemy-img").attr("src", "https://vignette.wikia.nocookie.net/lotr/images/d/de/248px-Aragorn2.jpg/revision/latest?cb=20070802171658");
+                $("#human-img").remove();
+                break;
+
+            case "elf":
+                $("#enemy-img").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6-QmgblrLgJRsccCHhzdTBnfWbHnRP6VahkYtDIgkzxOAHz2IQ");
+                $("#elf-img").remove();
+                break;
+
+            case "dwarf":
+                $("#enemy-img").attr("src", "https://static.giantbomb.com/uploads/scale_small/0/299/200890-gimli.jpg");
+                $("#dwarf-img").remove();
+                break;
+
+            case "hobbit":
+                $("#enemy-img").attr("src", "https://vignette.wikia.nocookie.net/lotr/images/8/80/4_hobbits.jpg/revision/latest?cb=20110117213317");
+                $("#hobbit-img").remove();
+                break;
+        }
+        game.displayGameMessage("<h3>!!!!BATTLE!!!!</h3>");
+        $("#game-message").addClass("text-center");
         console.log(game.enemyFaction);
         console.log(game.enemyBaseHealth);
         console.log(game.enemyCounterAttack);
@@ -46,95 +102,161 @@ var game = {
     //function to set player stats to choosen faction
     getPlayerStats: function () {
 
-            $("#human-select").on("click", function () {
-                if (game.counter === 0) {
-                game.setPlayerStats("human", 100, 5, 5);
-                game.counter++;
-                game.displayPlayerStats();
-                } else {
-                }
-            });
-
-            $("#elf-select").on("click", function () {
-                if (game.counter === 0) {
-                game.setPlayerStats("elf", 75, 5, 5);
+        $("#human-select").on("click", function () {
+            if (game.counter === 0) {
+                game.setPlayerStats("human", 200, 25, 10);
                 game.counter++;
                 game.displayPlayerStats();
             } else {
             }
-            });
+        });
 
-            $("#dwarf-select").on("click", function () {
-                if (game.counter === 0) {
-                game.setPlayerStats("dwarf", 200, 5, 5);
+        $("#elf-select").on("click", function () {
+            if (game.counter === 0) {
+                game.setPlayerStats("elf", 125, 12, 15);
                 game.counter++;
                 game.displayPlayerStats();
             } else {
             }
-            });
+        });
 
-            $("#hobbit-select").on("click", function () {
-                if (game.counter === 0) {
-                game.setPlayerStats("hobbit", 50, 5, 5);
+        $("#dwarf-select").on("click", function () {
+            if (game.counter === 0) {
+                game.setPlayerStats("dwarf", 300, 20, 5);
                 game.counter++;
                 game.displayPlayerStats();
-                
             } else {
             }
-            });
+        });
+
+        $("#hobbit-select").on("click", function () {
+            if (game.counter === 0) {
+                game.setPlayerStats("hobbit", 75, 10, 30);
+                game.counter++;
+                game.displayPlayerStats();
+
+            } else {
+            }
+        });
     },
 
     //function to set enemy stats to choosen faction
     getEnemyStats: function () {
-        // game.setEnemyStats("elf", 75, 5, 5);
-
 
         $("#human-select").on("click", function () {
             if (game.counter === 1 && game.playerFaction != "human") {
-            game.setEnemyStats("human", 100, 5, 5);
-            game.counter++;
-            game.displayEnemyStats();
+                game.setEnemyStats("human", 200, 30, "https://vignette.wikia.nocookie.net/lotr/images/d/de/248px-Aragorn2.jpg/revision/latest?cb=20070802171658");
+                game.displayEnemyStats();
             } else {
             }
         });
 
         $("#elf-select").on("click", function () {
             if (game.counter === 1 && game.playerFaction != "elf") {
-            game.setEnemyStats("elf", 75, 5, 5);
-            game.counter++;
-            game.displayEnemyStats();
-        } else {
-        }
+                game.setEnemyStats("elf", 125, 15, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6-QmgblrLgJRsccCHhzdTBnfWbHnRP6VahkYtDIgkzxOAHz2IQ");
+                game.displayEnemyStats();
+            } else {
+            }
         });
 
         $("#dwarf-select").on("click", function () {
-            if (game.counter === 1 && game.playerFaction != "dwarf"){
-            game.setEnemyStats("dwarf", 200, 5, 5);
-            game.counter++;
-            game.displayEnemyStats();
-        } else {
-        }
+            if (game.counter === 1 && game.playerFaction != "dwarf") {
+                game.setEnemyStats("dwarf", 300, 25, "https://static.giantbomb.com/uploads/scale_small/0/299/200890-gimli.jpg");
+                game.displayEnemyStats();
+            } else {
+            }
         });
 
         $("#hobbit-select").on("click", function () {
             if (game.counter === 1 && game.playerFaction != "hobbit") {
-            game.setEnemyStats("hobbit", 50, 5, 5);
-            game.counter++;
-            game.displayEnemyStats();
-            
-        } else {
-        }
+                game.setEnemyStats("hobbit", 75, 12, "https://vignette.wikia.nocookie.net/lotr/images/8/80/4_hobbits.jpg/revision/latest?cb=20110117213317");
+                game.displayEnemyStats();
+
+            } else {
+            }
         });
-    }
-
- 
+    },
 
 
-    //function to set enemy stats to choosen enemy
+    initiateAttack: function () {
+        $("#fight-button").on("click", function () {
+
+            if (game.playerCurrentHealth > 0 && game.enemyCurrentHealth > 0) {
+                game.calculateDamage();
+                game.evaluateDamage();
+            }
+
+        });
+    },
 
     //function to deal combat damage
+    calculateDamage: function () {
+        //Combat damage is dealt
+        game.playerCurrentHealth -= game.enemyCounterAttack;
+        game.enemyCurrentHealth -= game.playerCurrentAttack;
+
+        console.log("player health: ", game.playerCurrentHealth);
+        console.log("enemy health", game.enemyCurrentHealth);
+
+    },
+
+    evaluateDamage: function () {
+
+        if (game.playerCurrentHealth <= 0) {
+            console.log("Get wrekt");
+        } else if (game.enemyCurrentHealth <= 0) {
+            console.log("Winner winner chicken dinner");
+
+            switch (game.test) {
+                case 0:
+                    $("#defeated-enemy1").attr("src", game.enemyImgSrc)
+                    $("#defeated-enemy1").addClass("height-custom");
+                    game.test++;
+                    game.newEnemy();
+                    break;
+                case 1:
+                    $("#defeated-enemy2").attr("src", game.enemyImgSrc)
+                    $("#defeated-enemy2").addClass("height-custom");
+                    game.test++;
+                    game.newEnemy();
+                    break;
+                case 2:
+                    $("#defeated-enemy3").attr("src", game.enemyImgSrc)
+                    $("#defeated-enemy3").addClass("height-custom");
+                    game.test++;
+                    game.newEnemy();
+                    break;
+            }
+            game.displayGameMessage("<h3>Pick a new Foe</h3>");
+            game.newEnemy();
+
+            if (game.test === 3) {
+                game.displayGameMessage("<h3>You won!</h3>");
+            }
+            console.log(game.test);
+        }
+
+        game.playerCurrentAttack += game.playerAttackScale;
+    },
+
+    newEnemy: function () {
+        game.enemyFaction = "";
+        game.enemyBaseHealth = "";
+        game.enemyCurrentHealth = "";
+        game.enemyCounterAttack = "";
+        $("#enemy-card").addClass("hidden");
+        $("#enemy-img").removeAttr("src");
+
+        $("#defeated-foes-message").removeClass("hidden");
+
+    },
+
+    displayGameMessage: function (message) {
+        $("#game-message").html(message);
+    }
 
     //function to test if damage was lethal, and if so prompt for new opponent
 }
 game.getPlayerStats();
- game.getEnemyStats();
+game.getEnemyStats();
+game.initiateAttack();
