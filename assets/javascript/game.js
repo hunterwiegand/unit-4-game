@@ -43,22 +43,22 @@ var game = {
         switch (game.playerFaction) {
             case "human":
                 $("#fighter-img").attr("src", "https://vignette.wikia.nocookie.net/lotr/images/d/de/248px-Aragorn2.jpg/revision/latest?cb=20070802171658");
-                $("#human-img").remove();
+                $(".human-img").addClass("hidden");
                 break;
 
             case "elf":
                 $("#fighter-img").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6-QmgblrLgJRsccCHhzdTBnfWbHnRP6VahkYtDIgkzxOAHz2IQ");
-                $("#elf-img").remove();
+                $(".elf-img").remove();
                 break;
 
             case "dwarf":
                 $("#fighter-img").attr("src", "https://static.giantbomb.com/uploads/scale_small/0/299/200890-gimli.jpg");
-                $("#dwarf-img").remove();
+                $(".dwarf-img").remove();
                 break;
 
             case "hobbit":
                 $("#fighter-img").attr("src", "https://vignette.wikia.nocookie.net/lotr/images/8/80/4_hobbits.jpg/revision/latest?cb=20110117213317");
-                $("#hobbit-img").remove();
+                $(".hobbit-img").remove();
                 break;
         }
         $("#game-message").html("<h3>Choose your Enemy!</h3>");
@@ -73,22 +73,22 @@ var game = {
         switch (game.enemyFaction) {
             case "human":
                 $("#enemy-img").attr("src", "https://vignette.wikia.nocookie.net/lotr/images/d/de/248px-Aragorn2.jpg/revision/latest?cb=20070802171658");
-                $("#human-img").remove();
+                $(".human-img").remove();
                 break;
 
             case "elf":
                 $("#enemy-img").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6-QmgblrLgJRsccCHhzdTBnfWbHnRP6VahkYtDIgkzxOAHz2IQ");
-                $("#elf-img").remove();
+                $(".elf-img").remove();
                 break;
 
             case "dwarf":
                 $("#enemy-img").attr("src", "https://static.giantbomb.com/uploads/scale_small/0/299/200890-gimli.jpg");
-                $("#dwarf-img").remove();
+                $(".dwarf-img").remove();
                 break;
 
             case "hobbit":
                 $("#enemy-img").attr("src", "https://vignette.wikia.nocookie.net/lotr/images/8/80/4_hobbits.jpg/revision/latest?cb=20110117213317");
-                $("#hobbit-img").remove();
+                $(".hobbit-img").remove();
                 break;
         }
         game.displayGameMessage("<h3>!!!!BATTLE!!!!</h3>");
