@@ -101,7 +101,6 @@ var game = {
     //When img is clicked changes img to show stats for character
     //Then change back to img is clicked again
     displayCharacterStats: function () {
-
     },
 
 
@@ -199,6 +198,7 @@ var game = {
         game.playerCurrentHealth -= game.enemyCounterAttack;
         game.enemyCurrentHealth -= game.playerCurrentAttack;
 
+        $("#combat-log").prepend("<br><hr>Player health: " + game.playerCurrentHealth + "<br><hr>Enemy health: " + game.enemyCurrentHealth);
         console.log("player health: ", game.playerCurrentHealth);
         console.log("enemy health", game.enemyCurrentHealth);
 
@@ -236,6 +236,7 @@ var game = {
                 game.displayGameMessage("<h3>You won!</h3>");
             }
             console.log(game.test);
+            $("#combat-log").html("");
         }
 
         game.playerCurrentAttack += game.playerAttackScale;
