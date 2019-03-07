@@ -27,58 +27,191 @@
         <p class="lead"></p>
       </div>
     </div>
+    <!--Set all Character cards-->
 
+    <!---------------------------- HUMAN CARD BEGINING -------------------->
     <div class="row">
-      <div class="col-md-3">
-        <div id="human-img" class="card text-center">
-          <img
-            src="https://vignette.wikia.nocookie.net/lotr/images/d/de/248px-Aragorn2.jpg/revision/latest?cb=20070802171658"
-            class="rounded float-left height-custom" alt="Image of Human">
-          <div class="card-body">
-            <button id="human-select" type="button" class="btn btn-sm">Select</button>
+      <div class="col-sm-3">
+        <div class="card text-white bg-dark mb-3" style="width: 18rem;height:24rem">
+          <div id="demo1" data-interval="false" class="carousel slide" data-ride="carousel">
+            <div class="card-body">
+              <!---------------------CARD BODY--------------------->
+              <!-- Indicators -->
+              <ul class="carousel-indicators">
+                <li data-target="#demo1" data-slide-to="0" class="active"></li>
+                <li data-target="#demo1" data-slide-to="1"></li>
+              </ul>
+
+
+              <!-- The slideshow -->
+              <div class="carousel-inner" style="height:17.2rem">
+
+                <div class="carousel-item active">
+                  <img class="card-img-top height-custom"
+                    src="https://vignette.wikia.nocookie.net/lotr/images/d/de/248px-Aragorn2.jpg/revision/latest?cb=20070802171658"
+                    alt="Card image cap" id="sample1">
+
+                </div>
+
+                <div class="carousel-item">
+                  <p class="card-text">Strong of heart, the human race have multiplied over the last era. Although
+                    they
+                    might not posses the mystical powers of Elves, or the sturdinees of a Dwarf; humans posses the
+                    power
+                    of will within their hearts.</p>
+                  <span id="human-text-heath">Health: 311<br></span>
+                  <span id="human-text-attack">Attack: 20<br></span>
+                  <span>Counter: 15</span>
+
+                </div>
+              </div>
+              <!---------------------CARD BODY END--------------------->
+
+            </div>
+          </div>
+          <div id="human-select" class="card-footer btn btn-primary">
+            Select
           </div>
         </div>
       </div>
 
-      <div class="col-md-3">
-        <div id="elf-img" class="card text-center">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6-QmgblrLgJRsccCHhzdTBnfWbHnRP6VahkYtDIgkzxOAHz2IQ"
-            class="rounded float-left height-custom" alt="Image of Elf">
-          <div class="card-body">
-            <button id="elf-select" type="button" class="btn btn-sm faction-btn">Select</button>
+      <!--------------------------ELF Card-------------------->
+      <div class="col-sm-3">
+        <div class="card text-white bg-dark mb-3" style="width: 18rem;height:24rem">
+          <div id="demo2" data-interval="false" class="carousel slide" data-ride="carousel">
+            <div class="card-body">
+              <!---------------------CARD BODY--------------------->
+              <!-- Indicators -->
+              <ul class="carousel-indicators">
+                <li data-target="#demo2" data-slide-to="0" class="active"></li>
+                <li data-target="#demo2" data-slide-to="1"></li>
+              </ul>
+
+
+              <!-- The slideshow -->
+              <div class="carousel-inner" style="height:17.2rem">
+
+                <div class="carousel-item active">
+                  <img class="card-img-top height-custom"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt6-QmgblrLgJRsccCHhzdTBnfWbHnRP6VahkYtDIgkzxOAHz2IQ"
+                    alt="Card image cap" id="sample2">
+
+                </div>
+
+                <div class="carousel-item">
+                  <p class="card-text">A mysterious race hidden in the depths of the forests, the Elves have maintained a complex civilization over multiple milenia. Don't let their petite exterior fool you, an Elves strike is nothing to scoff at.</p>
+                  <span id="elf-text-heath">Health: 250<br></span>
+                  <span id="elf-text-attack">Attack: 30<br></span>
+                  <span>Counter: 25</span>
+
+                </div>
+              </div>
+              <!---------------------CARD BODY END--------------------->
+
+            </div>
+          </div>
+          <div id="elf-select" class="card-footer btn btn-primary">
+            Select
           </div>
         </div>
       </div>
 
-      <div class="col-md-3">
-        <div id="dwarf-img" class="card text-center">
-          <img src="https://static.giantbomb.com/uploads/scale_small/0/299/200890-gimli.jpg"
-            class="rounded float-left height-custom" alt="Image of Dwarf">
-          <div class="card-body">
-            <button id="dwarf-select" type="button" class="btn btn-sm">Select</button>
+      <!-------------------------Dwarf Card------------------------>
+      <div class="col-sm-3">
+        <div class="card text-white bg-dark mb-3" style="width: 18rem;height:24rem">
+          <div id="demo3" data-interval="false" class="carousel slide" data-ride="carousel">
+            <div class="card-body">
+              <!---------------------CARD BODY--------------------->
+              <!-- Indicators -->
+              <ul class="carousel-indicators">
+                <li data-target="#demo3" data-slide-to="0" class="active"></li>
+                <li data-target="#demo3" data-slide-to="1"></li>
+              </ul>
+
+
+              <!-- The slideshow -->
+              <div class="carousel-inner" style="height:17.2rem">
+
+                <div class="carousel-item active">
+                  <img class="card-img-top height-custom"
+                    src="https://static.giantbomb.com/uploads/scale_small/0/299/200890-gimli.jpg" alt="Card image cap"
+                    id="sample3">
+
+                </div>
+
+                <div class="carousel-item">
+                  <p class="card-text">Short, stout, and ready to swing an axe twice his size at your face. The Dwarven race resides in their mountain, spending their days cast armour and weapons to one day conquer Middle Earth.</p>
+                  <span id="dwarf-text-heath">Health: 400<br></span>
+                  <span id="dwarf-text-attack">Attack: 35<br></span>
+                  <span>Counter: 35</span>
+
+                </div>
+              </div>
+              <!---------------------CARD BODY END--------------------->
+
+            </div>
+          </div>
+          <div id="dwarf-select" class="card-footer btn btn-primary">
+            Select
           </div>
         </div>
       </div>
 
-      <div class="col-md-3">
-        <div id="hobbit-img" class="card text-center">
-          <img
-            src="https://vignette.wikia.nocookie.net/lotr/images/8/80/4_hobbits.jpg/revision/latest?cb=20110117213317"
-            class="rounded float-left height-custom" alt="Image of Hobbits">
-          <div class="card-body">
-            <button id="hobbit-select" type="button" class="btn btn-sm">Select</button>
+      <!------------------------Fourth Card------------------->
+
+      <div class="col-sm-3">
+        <div class="card text-white bg-dark mb-3" style="width: 18rem;height:24rem">
+          <div id="demo4" data-interval="false" class="carousel slide" data-ride="carousel">
+            <div class="card-body">
+              <!---------------------CARD BODY--------------------->
+              <!-- Indicators -->
+              <ul class="carousel-indicators">
+                <li data-target="#demo4" data-slide-to="0" class="active"></li>
+                <li data-target="#demo4" data-slide-to="1"></li>
+              </ul>
+
+
+              <!-- The slideshow -->
+              <div class="carousel-inner" style="height:17.2rem">
+
+                <div class="carousel-item active">
+                  <img class="card-img-top height-custom"
+                    src="https://vignette.wikia.nocookie.net/lotr/images/8/80/4_hobbits.jpg/revision/latest?cb=20110117213317"
+                    alt="Card image cap" id="sample4">
+
+                </div>
+
+                <div class="carousel-item">
+                  <p class="card-text">A Hobbit's greatest advantage is being underestimated. Small, cleaver, and sneaky, a hobbit will never cease to suprise you.</p>
+                  <span id="hobbit-text-heath">Health: 211<br></span>
+                  <span id="hobbit-text-attack">Attack: 10<br></span>
+                  <span>Counter: 5</span>
+
+                </div>
+              </div>
+              <!---------------------CARD BODY END--------------------->
+
+            </div>
+          </div>
+          <div id="hobbit-select" class="card-footer btn btn-primary">
+            Select
           </div>
         </div>
       </div>
+
+
+
+
+
     </div>
+
+    <!-------------------Card End------------------>
 
     <div>
       <h3 class="text-center" id="game-message">Choose your faction!</h3>
     </div>
 
     <div class="row">
-
       <div class="col-md-3">
         <div id="fighter-card" class="card text-center hidden">
           <img id="fighter-img" src="" class="rounded float-left height-custom" alt="Image of Choosed Fighter">
@@ -127,6 +260,8 @@
         </div>
       </div>
     </div>
+
+
 
   </div>
   </div>
