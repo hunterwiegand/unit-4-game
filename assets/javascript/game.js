@@ -98,6 +98,12 @@ var game = {
         console.log(game.enemyCounterAttack);
     },
 
+    //When img is clicked changes img to show stats for character
+    //Then change back to img is clicked again
+    displayCharacterStats: function () {
+
+    },
+
 
     //function to set player stats to choosen faction
     getPlayerStats: function () {
@@ -199,6 +205,7 @@ var game = {
         //If damage was lethal
         if (game.playerCurrentHealth <= 0) {
             console.log("Get wrekt");
+            game.displayGameMessage("<h3>You've lost the Battle for Middle Earth, refresh to try again</h3>");
         } else if (game.enemyCurrentHealth <= 0) {
             console.log("Winner winner chicken dinner");
 
@@ -250,7 +257,6 @@ var game = {
         $("#game-message").html(message);
     }
 
-    //function to test if damage was lethal, and if so prompt for new opponent
 }
 game.getPlayerStats();
 game.getEnemyStats();
