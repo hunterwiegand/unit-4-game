@@ -18,3 +18,8 @@ img {
 .visible {
     visibility: visible;
 }
+
+.scroll-box-custom {
+    height: 300px;
+    overflow-y: scroll;
+}
